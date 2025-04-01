@@ -11,7 +11,7 @@ def quick_histogram(x: pl.Series, bins=20):
     plt.grid(alpha=0.3)
     plt.show()
 
-def quick_scatter(x_series, y_series):
+def quick_scatter(x_series: pl.Series, y_series: pl.Series):
     """Simple scatter"""
     x_data = x_series.to_numpy()
     y_data = y_series.to_numpy()

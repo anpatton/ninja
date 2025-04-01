@@ -1,5 +1,5 @@
 def create_release_agg_frame(frame: pl.DataFrame) -> pl.DataFrame:
-    """Creates aggregated summary statistics for pitcher realease variables"""
+    """Creates aggregated summary statistics for pitcher release variables"""
     frame = frame.group_by(["pitcher", "pitch_type"]).agg(
         [
             pl.col("release_pos_x").mean().alias("release_pos_x_mean"),
